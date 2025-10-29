@@ -1,16 +1,16 @@
 /* reset predefined styles */
 *{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
+    padding: 0; 
+    box-sizing: border-box;
 }
 
 /* set variables for colors and spaces */
 :root{
 
-    --c-main : #FF7400;
-    --c-sec-100 : #FFFFFF;
-    --c-sec-200 : #F9F9F9;
+    --c-caramel : #FF7400;
+    --c-milk : #FFFFFF;
+    --c-dark-choco : #2C0801;
     --c-sec-500 : #BABABA;
     --c-sec-900 : #141414; 
 
@@ -20,6 +20,39 @@
     --space-3 : 3em;
     --space-4 : 4em;
 
+}
+
+body {
+    background-image:url("assets/background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* homepage title*/
+#homepage-title {
+  color: var(--c-dark-choco);
+}
+
+#air-container {
+    background-color: var(--c-dark-choco);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sun {
+    width: 100px;
+    height: 100px;
+    background-color: var(--c-caramel);
+}
+
+.percentage {
+    width: 100px;
+    height: 100px;
+    background-color: var(--c-caramel);
 }
 
 /* class utilities for flexbox */
@@ -56,7 +89,6 @@
 
 
 body {
-
 
     /* base font size and family */
     font-size : 16px;
