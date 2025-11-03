@@ -8,7 +8,7 @@
 /* set variables for colors and spaces */
 :root{
 
-    --c-caramel : #FF7400;
+    --c-caramel : #D9934A;
     --c-milk : #FFFFFF;
     --c-dark-choco : #2C0801;
     --c-sec-500 : #BABABA;
@@ -113,10 +113,11 @@ body {
   margin: 1rem auto;     /* centers horizontally with top/bottom space */
   border-radius: 1rem;
 
-  /*
+  display: flex;
   flex-wrap: wrap;
-  align-content: space-between;
-  */
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-05);
 }
 
 
@@ -140,9 +141,30 @@ body {
 
 #temperature {
   width: 100px;
+  width: 48%;  
   height: 100px;
   background-color: var(--c-dark-choco);
   border-radius: 1rem;
+  aspect-ratio: 1 / 1; 
+  opacity: 80%;
+  padding: 8px; 
+}
+
+#temperature-orange {
+  width: 100px;
+  width: 48%;  
+  height: 100px;
+  background-color: var(--c-caramel);
+  border-radius: 1rem;
+  aspect-ratio: 1 / 1; 
+  opacity: 80%;
+  padding: 8px; 
+}
+
+.icon {
+  width:24px;
+  height:24px;
+  margin-bottom: 2px;
 }
 
 .inputColor{
@@ -218,6 +240,13 @@ body {
     margin-bottom: var(--space-1);
 }
 
+    h3{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: var(--space-1);
+    }
+
     /* how to use variables */
     background-color : var(--c-sec-100);
 
@@ -234,40 +263,3 @@ body {
 .is-orange{
   color: var(--c-caramel);
 }
-
-
-
-/* issues with size
-
-#air-container-1 {
-  background-color: var(--c-dark-choco);
-  width: 80%;            
-  max-width: 400px;      
-  height: 40%;           
-  max-height: 300px;
-
-  margin: 1rem auto;     
-  border-radius: 1rem;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-
-  padding: 1rem;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-}
-
-#air-container-2 {
-  background-color: var(--c-dark-choco);
-  width: 80%;            
-  max-width: 400px;      
-  height: 40%;       
-  max-height: 300px;
-
-  margin: 1rem auto;    
-  border-radius: 1rem;
-
-  padding: 1rem;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-}*/
