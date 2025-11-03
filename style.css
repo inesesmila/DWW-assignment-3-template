@@ -46,7 +46,7 @@ body {
   width: 80%;            
   max-width: 400px;      /* limits size on big screens */
   height: 40%;           /* doesn’t cover full height */
-  max-height: 300px;
+  max-height: 400px;
 
   margin: 1rem auto;     /* centers horizontally with top/bottom space */
   border-radius: 1rem;
@@ -63,14 +63,52 @@ body {
   box-shadow: 0 8px 25px rgba(0,0,0,0.4);
 }
 
+#sun-container {
+    width: 300px;
+    height: 200px;
+    /* resize sun with padding */
+    padding: 12px;
+
+    background-color: var(--c-dark-choco);
+
+    /* hide overflow -> the sun blur */
+    overflow-y: clip;
+}
+
+
+/*thoma's part begin*/ 
+#sun {
+    background-color: var(--c-dark-choco);
+    border-radius: 100%;
+    margin: auto;
+    margin-top: 10%;
+
+    width: 80%;
+    aspect-ratio: 1 / 1;
+}
+
+#sun-blur {
+    /* we modify this value to move blur effect */
+    margin-top: -100px;
+
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    backdrop-filter: blur(1em);
+    border-top: solid 2px var(--c-caramel);
+
+    /* smooth transition for the blur */
+    transition: margin-top 2s; 
+}
+/*thoma's part end*/ 
+
 
 /* centered dark-choco container 2*/
 #air-container-2 {
-  background-color: var(--c-dark-choco);
   width: 80%;            
   max-width: 400px;      /* limits size on big screens */
   height: 40%;           /* doesn’t cover full height */
-  max-height: 300px;
+  max-height: 200px;
 
   margin: 1rem auto;     /* centers horizontally with top/bottom space */
   border-radius: 1rem;
@@ -79,8 +117,6 @@ body {
   flex-wrap: wrap;
   align-content: space-between;
   */
-  padding: 1rem;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
 }
 
 
@@ -102,6 +138,16 @@ body {
     background-color: var(--c-dark-choco);
 }
 
+#temperature {
+  width: 100px;
+  height: 100px;
+  background-color: var(--c-dark-choco);
+  border-radius: 1rem;
+}
+
+.inputColor{
+  color: var(--c-milk);
+}
 
 
 

@@ -33,7 +33,21 @@
             <h1 class="is-orange">20%</h1>
             <h2 class="is-white">perfect</h2>
         </div>
-        <div id="sun" class=""></div>
+        <div id="sun-container">
+        <div id="sun">            
+        </div>
+        <div id="sun-blur">
+        </div>
+    </div>
+
+
+    <input 
+        type="range"
+        id="moveBlur"
+        min="0"
+        max="240"
+        class="inputColor"
+        >
         <div id="percentage2" class="self-end">
             <h1 class="is-orange">80%</h1>
             <h2 class="is-white">poor</h2>
@@ -42,13 +56,14 @@
 
     </div>
 
-    <div id="air-container-2">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <div id="air-container-2" class="rowGap">
+        <div id="temperature"></div>
+        <div id="temperature"></div>
+        <div id="temperature"></div>
+        <div id="temperature"></div>
     </div>
 
+     
 
     <!-- lucide icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
