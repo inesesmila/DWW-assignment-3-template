@@ -28,6 +28,7 @@ const IO = new AdafruitIO("is4646", "aio_iRCl32jQTDEUuiB2bucROlpzMvXL");
             // we need to parse 
             let currentData = data.json[0].value.split(",");
             console.log(currentData);
+
             const tempDisplay = document.getElementById("temp-display");
             tempDisplay.innerHTML = currentData[0].split(".")[0];
 
@@ -39,6 +40,17 @@ const IO = new AdafruitIO("is4646", "aio_iRCl32jQTDEUuiB2bucROlpzMvXL");
 
             const pressDisplay = document.getElementById("press-display");
             pressDisplay.innerHTML = currentData[1].split(".")[0];
+
+            const poorDisplay = document.getElementById("poor-display");
+            poorDisplay.innerHTML = currentData[2].split(".")[0];
+
+            const perfDisplay  = document.getElementById("perf-display");
+
+            const poor = parseFloat(currentData[2]);
+            const perfect = Math.max(0, Math.min(100, 100 - poor));
+            perfDisplay.textContent = Math.round(perfect);
+            poorDisplay.textContent = Math.round(poor);
+
 
             // update sun illustration
             blur.style.marginTop = `-${currentData[2].split(".")[0]}px`;
