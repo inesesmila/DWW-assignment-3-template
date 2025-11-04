@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
-const IO = new AdafruitIO("is4646", "aio_iRCl32jQTDEUuiB2bucROlpzMvXL");
+const IO = new AdafruitIO("is4646", "secret key");
     // target the div which as the blur effect
     const blur = document.getElementById("sun-blur");
 
