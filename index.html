@@ -15,11 +15,6 @@
     <!-- ########################   scripts and ressources  ######################## -->
     <!-- Adafruit IO custom library -->
     <script src="https://cdn.jsdelivr.net/gh/methio/adafruitIO-class@latest/index.js"></script>
-    <!-- alwan color picker -->
-    <script src="https://cdn.jsdelivr.net/npm/alwan@2/dist/js/alwan.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alwan@2/dist/css/alwan.min.css"/>
-    <!-- get color name from its hex value -->
-     <script src="https://chir.ag/projects/ntc/ntc.js"></script>
     <!-- script custom -->
     <script src="script.js" defer></script>
 </head>
@@ -40,7 +35,7 @@
         </div>
     </div>
 
-
+<!--
     <input 
         type="range"
         id="moveBlur"
@@ -48,6 +43,8 @@
         max="240"
         class="inputColor"
         >
+
+-->
         <div id="percentage2" class="self-end">
             <h1 class="is-orange">80%</h1>
             <h2 class="is-white">poor</h2>
@@ -59,23 +56,23 @@
     <div id="air-container-2">
         <div id="temperature"> 
             <img src="assets/thermometer-white.png" alt="Thermometer icon" class="icon">
-            <h3 class="is-white">22°C</h3>
+            <h3 class="is-white"><span id="temp-display">22</span>°C</h3>
             <h2 class="is-white">temperature</h2>
         </div>
         <div id="temperature">
             <img src="assets/droplet-white.png" alt="Droplet icon" class="icon">
-            <h3 class="is-white">50%</h3>
+            <h3 class="is-white"><span id="humi-display">50</span>%</h3>
             <h2 class="is-white">humidity</h2>
         </div>
         <div id="temperature-orange">
             <img src="assets/ppm-white.png" alt="PPM icon" class="icon">
-            <h3 class="is-white">500ppm</h3>
+            <h3 class="is-white"><span id="co2-display">500</span>ppm</h3>
             <h2 class="is-white">co2</h2>
         </div>
         <div id="temperature-orange">
             <img src="assets/CO2-white.png" alt="CO2 icon" class="icon">
-            <h3 class="is-white">12µg/m³</h3>
-            <h2 class="is-white">pm2.5</h2>
+            <h3 class="is-white"><span id="press-display">12</span>Pa</h3>
+            <h2 class="is-white">pressure</h2>
         </div>
     </div>
 
